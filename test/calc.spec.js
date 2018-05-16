@@ -1,25 +1,22 @@
 import { expect } from 'chai';
-import { sum, sub, mult, div } from '../src/main';
+import { it, describe } from 'mocha';
+import { sum, sub, mult, div } from '../src/calc';
 
 describe('Calc', () => {
   describe('Smoke tests', () => {
     it('should exist the method sum', () => {
-      expect(sum).to.exist;
       expect(sum).to.be.a('function');
     });
 
     it('should exist the method sub', () => {
-      expect(sub).to.exist;
       expect(sub).to.be.a('function');
     });
 
     it('should exist the method mult', () => {
-      expect(mult).to.exist;
       expect(mult).to.be.a('function');
     });
 
     it('should exist the method div', () => {
-      expect(div).to.exist;
       expect(div).to.be.a('function');
     });
   });

@@ -4,8 +4,8 @@
   "description": "Nossa biblioteca do curso de JS na pratica.",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint",
+    "lint": "./node_modules/.bin/eslint src/**/*.js test/**/*.spec.js",
+    "prepush": "npm run lint && npm test",
     "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register",
     "test:tdd": "npm run test -- --watch "
   },
