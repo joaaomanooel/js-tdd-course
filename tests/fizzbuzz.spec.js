@@ -21,4 +21,8 @@ describe('FizzBuzz', () => {
   it('Sould return the number when is not multiple of 3 or 5', () => {
     expect(FizzBuzz(7)).to.be.equal(7);
   });
+
+  it('Sould return 0 when 0', () => {
+    expect(FizzBuzz(0)).to.be.equal(0);
+  });
 });

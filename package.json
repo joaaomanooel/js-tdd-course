@@ -4,10 +4,15 @@
   "description": "Nossa biblioteca do curso de JS na pratica.",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/**/*.js test/**/*.spec.js",
+    "lint": "./node_modules/.bin/eslint src/**/*.js tests/**/*.spec.js",
     "prepush": "npm run lint && npm test",
-    "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register",
-    "test:tdd": "npm run test -- --watch "
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "npm test -- --watch ",
+    "test:converage": "nyc npm test"
+  },
+  "nyc":{
+    "reporter": [ "text", "html" ],
+    "exclude": [ "tests/**" ]
   },
   "repository": {
     "type": "git",
@@ -32,6 +37,7 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0",
     "husky": "^0.14.3",
-    "mocha": "^5.1.1"
+    "mocha": "^5.1.1",
+    "nyc": "^11.8.0"
   }
 }
